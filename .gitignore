@@ -1,0 +1,25 @@
+# 输出
+dist
+lib
+es
+
+# 中间转换
+temp
+coverage
+
+# 输入
+# src ## 源码
+# tests  ## 测试用例
+# docs  ## API .md
+# example  ## 示例 .html
+# scripts
+tutorials
+
+# 构建
+node_modules
+npm-debug.log
+yarn-error.log
+# package-lock.json
+# yarn.lock
+
+_*

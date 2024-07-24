@@ -1,14 +1,18 @@
 {
+  "$schema": "http://json.schemastore.org/tsconfig",
+  // This file is not used in compilation. It is here just for a nice editor experience.
+  "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ES5",
     "module": "ES2015",
     "rootDir": "src",
     "outDir": "dist",
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "sourceMap": false,
     "declaration": false,
     "declarationMap": false,
+    "sourceMap": false,
     "removeComments": false,
     "strict": true
   },

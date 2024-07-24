@@ -20,25 +20,9 @@ const banner = `/*!* ${pkg.name.split('/').slice(-1)}.js v${pkg.version} \n * (c
 export default {
   input: 'src/index.ts',
   output: [
-    // {
-    //   format: 'system',
-    //   banner,
-    //   file: pkg.system,
-    // },
-    // {
-    //   format: 'es',
-    //   banner,
-    //   file: pkg.module,
-    // },
-    // {
-    //   format: 'cjs',
-    //   exports: 'auto',
-    //   banner,
-    //   file: pkg.main,
-    // },
     {
       format: 'umd',
-      name: 'dora',
+      name: 'rework',
       exports: 'named',
       banner,
       file: pkg.browser.split('.')[0] + '.js',
@@ -46,7 +30,7 @@ export default {
     },
     {
       format: 'umd',
-      name: 'dora',
+      name: 'rework',
       exports: 'named',
       banner,
       file: pkg.browser,

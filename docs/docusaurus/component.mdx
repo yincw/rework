@@ -1,0 +1,99 @@
+# MDX 组件
+
+## 依赖
+
+- prod
+  - @docusaurus/preset-classic
+    - @docusaurus/core
+    - @docusaurus/plugin-content-docs
+    - @mdx-js/react
+    - clsx
+    - prism-react-renderer
+    - react
+    - react-dom
+  - @docusaurus/theme-live-codeblock
+- dev
+  - @docusaurus/tsconfig
+  - @docusaurus/types
+  - @docusaurus/module-type-aliases
+  - @easyops-cn/docusaurus-search-local
+  - typescript
+  - typedoc
+    - typedoc-plugin-markdown
+      - docusaurus-plugin-typedoc
+
+
+## 选项卡
+
+- https://docusaurus.io/zh-CN/docs/markdown-features/tabs
+
+```jsx 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+// MDX
+<Tabs>
+  <TabItem value="apple" label="Apple" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+```
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="apple" label="Apple" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+
+## 代码
+
+- https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks#usage-in-jsx
+
+```jsx
+import CodeBlock from '@theme/CodeBlock';
+
+export default function MyReactPage() {
+  return (
+    <div>
+      <CodeBlock
+        language="jsx"
+        title="/src/components/HelloCodeTitle.js"
+        showLineNumbers
+        metastring='{1-2}'
+        >
+        {`function HelloCodeTitle(props) {
+          return <h1>Hello, {props.name}</h1>;
+        }`}
+      </CodeBlock>
+    </div>
+  );
+}
+```
+
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock
+  language="jsx"
+  title="/src/components/HelloCodeTitle.js"
+  showLineNumbers
+  metastring='{1-2}'
+  >
+  {`function HelloCodeTitle(props) {
+  return <h1>Hello, {props.name}</h1>;
+}`}
+</CodeBlock>

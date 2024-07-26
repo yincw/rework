@@ -13,6 +13,7 @@ Markdown 语法 | HTML 标签 | 说明
  `######` | h6 | 标题 6
 
 - https://commonmark.org/help/
+- https://docusaurus.io/zh-CN/docs/markdown-features/toc
 
 ### 段落
 
@@ -28,8 +29,6 @@ Markdown 语法 | HTML 标签 | 说明
 
 ### 链接
 
-- https://docusaurus.io/zh-CN/docs/markdown-features/links
-
 [Link](http://a.com)
 
 ```js
@@ -37,9 +36,9 @@ Markdown 语法 | HTML 标签 | 说明
 // [Link](http://a.com)
 ```
 
-### 图片
+- https://docusaurus.io/zh-CN/docs/markdown-features/links
 
-- https://docusaurus.io/zh-CN/docs/markdown-features/assets
+### 图片
 
 ![Image](/img/docusaurus.png)
 
@@ -48,18 +47,20 @@ Markdown 语法 | HTML 标签 | 说明
 // ![Image](/img/docusaurus.png)
 ```
 
+- https://docusaurus.io/zh-CN/docs/markdown-features/assets
+
 ### 引用
 
 > Blockquote
-> 
+>
 > > Nested Blockquote
-> 
+>
 > — Docusaurus
 
 ```js
 // blockquote
 // > Blockquote
-// > 
+// >
 // > > Nested Blockquote
 // >
 // > — Docusaurus
@@ -75,8 +76,6 @@ Markdown 语法 | HTML 标签 | 说明
 ```
 
 ### 代码
-
-- https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks
 
 #### 内联代码
 
@@ -147,6 +146,8 @@ render(
 );
 ```
 
+- https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks
+
 ### 列表
 
 #### 无序列表
@@ -169,7 +170,7 @@ render(
 // ol > li
 // 1. List Item
 // 2. List Item
-```  
+```
 
 #### 嵌套列表
 
@@ -188,12 +189,13 @@ render(
 // 2. List Item
 //    - List Item
 //    - List Item
-```  
+```
 
 ### 表格
 
 表头1 | 表头2
 ---|---
+单元格1 | 单元格2
 单元格1 | 单元格2
 
 ```js
@@ -201,47 +203,47 @@ render(
 // 表头1 | 表头2
 // ---|---
 // 单元格1 | 单元格2
-```  
+```
 
 ## 告示
 
-- https://docusaurus.io/zh-CN/docs/markdown-features/tabs
-
 :::note
 
-Some **content** with _Markdown_ `syntax`. 
+Some **content** with _Markdown_ `syntax`.
 
 :::
 
 :::tip
 
-Some **content** with _Markdown_ `syntax`. 
+Some **content** with _Markdown_ `syntax`.
 
 :::
 
 :::info
 
-Some **content** with _Markdown_ `syntax`. 
+Some **content** with _Markdown_ `syntax`.
 
 :::
 
 :::warning
 
-Some **content** with _Markdown_ `syntax`. 
+Some **content** with _Markdown_ `syntax`.
 
 :::
 
 :::danger
 
-Some **content** with _Markdown_ `syntax`. 
+Some **content** with _Markdown_ `syntax`.
 
 :::
+
+- https://docusaurus.io/zh-CN/docs/markdown-features/admonitions
 
 ## HTML details
 
 <details>
     <summary>Toggle me!</summary>
-  
+
     This is the detailed content
 
     ```js
@@ -264,4 +266,6 @@ Some **content** with _Markdown_ `syntax`.
 //   <summary>Toggle me!</summary>
 // ...
 // <details>
-``` 
+```
+
+- https://docusaurus.io/docs/markdown-features#details

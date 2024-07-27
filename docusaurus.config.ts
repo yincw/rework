@@ -11,8 +11,8 @@ const config: Config = {
   url: 'https://yincw.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  // baseUrl: '/rework/',
-  baseUrl: '/',
+  baseUrl: '/rework/',
+  // baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

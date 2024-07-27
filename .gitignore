@@ -2,6 +2,7 @@
 dist
 lib
 es
+build
 
 # 中间转换
 temp

@@ -2,10 +2,11 @@ import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
-import postcss from 'rollup-plugin-postcss';
 import babel from '@rollup/plugin-babel';
 import json from '@rollup/plugin-json';
 // import terser from '@rollup/plugin-terser';
+import postcss from 'rollup-plugin-postcss';
+import copy from 'rollup-plugin-copy';
 import pkg from './package.json';
 // import pkg from './package.json' assert { type: "json" };
 
@@ -71,5 +72,29 @@ export default {
       exclude: 'node_modules/**',
     }),
     json(),
+    copy({
+      targets: [
+        {
+          src: 'src/**/*.less',
+          dest: 'es',
+        },
+        {
+          src: 'src/*.less',
+          dest: 'es',
+        },
+        {
+          src: 'src/index.d.ts',
+          dest: 'es',
+        },
+        {
+          src: 'src/**/*.less',
+          dest: 'lib',
+        },
+        {
+          src: 'src/*.less',
+          dest: 'lib',
+        },
+      ]
+    })
   ],
 };

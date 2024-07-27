@@ -1,9 +1,11 @@
+import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import postcss from 'rollup-plugin-postcss';
 import babel from '@rollup/plugin-babel';
 import json from '@rollup/plugin-json';
-import terser from '@rollup/plugin-terser';
+// import terser from '@rollup/plugin-terser';
 import pkg from './package.json';
 // import pkg from './package.json' assert { type: "json" };
 
@@ -21,31 +23,31 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      format: 'umd',
+      format: 'cjs',
       name: 'rework',
       exports: 'named',
       banner,
       file: pkg.browser.split('.')[0] + '.js',
       sourcemap: true,
     },
-    {
-      format: 'umd',
-      name: 'rework',
-      exports: 'named',
-      banner,
-      file: pkg.browser,
-      plugins: [
-        terser({
-          compress: {
-            drop_console: true,
-          },
-          format: {
-            comments: /^!/,
-          },
-        }),
-      ],
-      sourcemap: true,
-    },
+    // {
+    //   format: 'umd',
+    //   name: 'rework',
+    //   exports: 'named',
+    //   banner,
+    //   file: pkg.browser,
+    //   plugins: [
+    //     terser({
+    //       compress: {
+    //         drop_console: true,
+    //       },
+    //       format: {
+    //         comments: /^!/,
+    //       },
+    //     }),
+    //   ],
+    //   sourcemap: true,
+    // },
   ],
   external: ['core-js'],
   plugins: [
@@ -56,6 +58,12 @@ export default {
     typescript({
       module: 'ES2015',
       sourceMap: true,
+    }),
+    postcss({
+      extract: path.resolve(pkg.browser.split('.')[0] + '.min.css'), // Less => css
+      minimize: true, // cssnano
+      // modules: true, // CSS Modules
+      // exec: true, // CSS-in-JS
     }),
     babel({
       // babelHelpers: 'bundled',

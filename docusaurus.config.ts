@@ -19,7 +19,7 @@ const config: Config = {
   organizationName: 'yincw', // Usually your GitHub org/user name.
   projectName: 'yincw.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
-  trailingSlash: true,
+  // trailingSlash: true,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -42,7 +42,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/yincw/rework/',
-          routeBasePath: '/', // 文档模式
+          // routeBasePath: '/', // 文档模式下，本地搜索无法使用
         },
         blog: false, // 文档模式
         // blog: {

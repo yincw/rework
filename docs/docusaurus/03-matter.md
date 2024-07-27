@@ -18,9 +18,9 @@ custom_edit_url: null
 
 ## 模式
 
-- 文档模式
-- 博客模式
-- 页面模式
+- 文档模式 https://docusaurus.io/docs/docs-introduction#docs-only-mode
+- 博客模式 https://docusaurus.io/docs/blog#blog-only-mode
+- 页面模式 https://docusaurus.io/docs/creating-pages
 
 ## 通用
 

@@ -17,8 +17,10 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'yincw', // Usually your GitHub org/user name.
-  projectName: 'rework', // Usually your repo name.
+  projectName: 'yincw.github.io', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
+  trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -39,10 +41,10 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/yincw/rework/',
+          editUrl: 'https://github.com/yincw/rework/',
+          routeBasePath: '/', // 文档模式
         },
-        blog: false,
+        blog: false, // 文档模式
         // blog: {
         //   showReadingTime: true,
         //   // Please change this to your repo.

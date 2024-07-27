@@ -4,8 +4,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import rework from 'rework';
-
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -38,18 +36,11 @@ export default function Home(): JSX.Element {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-
-      <div>
-        <div className='text-center'>dsffs</div>
-        <div className='containerx'>dsffs</div>
-        <div>{rework.name}</div>
-      </div>
-
-      {/* <HomepageHeader />
+      <HomepageHeader />
       <div className="hero hero--primary"></div>
       <main>
         <HomepageFeatures />
-      </main> */}
+      </main>
     </Layout>
   );
 }

@@ -48,7 +48,7 @@ require('@yincw/rework');
 
 ```html
 <!-- index.html -->
-<script src="/dist/rework.min.css"></script>
+<link rel="stylesheet" href="/dist/rework.min.css">
 ```
 
 ## ⌨️ 开发
@@ -60,15 +60,8 @@ npm run dev
 // 构建
 npm run build
 
-// 单元测试
-npm run test
-// 测试覆盖范围
-npm run test:coverage
-// 端对端测试
-npm run test:e2e
-
 // 文档
-npm run docs
+npm run docs:build
 ```
 
 通过样板命令，自动化创建对应的 源码样板及测试用例样板。

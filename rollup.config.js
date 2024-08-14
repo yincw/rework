@@ -4,10 +4,10 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import babel from '@rollup/plugin-babel';
 import json from '@rollup/plugin-json';
-// import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
 import pkg from './package.json';
+// import terser from '@rollup/plugin-terser';
 // import pkg from './package.json' assert { type: "json" };
 
 const banner = `/*!* ${pkg.name.split('/').slice(-1)}.js v${pkg.version} \n * (c) 2020-${new Date().getFullYear()} ${
@@ -75,11 +75,11 @@ export default {
     copy({
       targets: [
         {
-          src: 'src/**/*.less',
+          src: 'src/*.less',
           dest: 'es',
         },
         {
-          src: 'src/*.less',
+          src: 'src/**/*.less',
           dest: 'es',
         },
         {
@@ -87,11 +87,11 @@ export default {
           dest: 'es',
         },
         {
-          src: 'src/**/*.less',
+          src: 'src/*.less',
           dest: 'lib',
         },
         {
-          src: 'src/*.less',
+          src: 'src/**/*.less',
           dest: 'lib',
         },
       ]

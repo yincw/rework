@@ -1,0 +1,119 @@
+# 代码
+
+## 语法高亮
+
+- `title` 显示文件路径及名称
+
+- https://docusaurus.io/docs/markdown-features/code-blocks#supported-languages
+
+## 代码行高亮及编号
+
+- `{1,4-6}` 高亮行
+- `// highlight-next-line` 高亮下一行
+- `// highlight-start` 高亮行开始
+- `// highlight-end ` 高亮行结束
+- `showLineNumbers` 显示行号
+
+- https://docusaurus.io/docs/markdown-features/code-blocks#line-highlighting
+- https://docusaurus.io/docs/markdown-features/code-blocks#line-numbering
+- https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks#custom-magic-comments
+
+## 导入代码片段
+
+```jsx
+import CodeBlock from '@theme/CodeBlock';
+
+export default function MyReactPage() {
+  return (
+    <div>
+      <CodeBlock
+        language="jsx"
+        title="/src/components/HelloCodeTitle.js"
+        showLineNumbers
+        metastring='{1-2}'
+        >
+        {`function HelloCodeTitle(props) {
+          return <h1>Hello, {props.name}</h1>;
+        }`}
+      </CodeBlock>
+    </div>
+  );
+}
+```
+
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock
+  language="jsx"
+  title="/src/components/HelloCodeTitle.js"
+  showLineNumbers
+  metastring='{1-2}'
+  >
+  {`function HelloCodeTitle(props) {
+  return <h1>Hello, {props.name}</h1>;
+}`}
+</CodeBlock>
+
+- https://docusaurus.io/zh-CN/docs/markdown-features/react#importing-components
+- https://docusaurus.io/zh-CN/docs/markdown-features/react#importing-code-snippets
+- https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks#usage-in-jsx
+
+
+## 组件预览
+
+- `live` 可交互的代码编辑器（实时显示在结果的预览区域）
+  - `noInline` 命令式渲染 `render()`
+
+```js  title="/src/components/HelloCodeTitle.js" showLineNumbers {1}
+console.log("Markdown features including the code block are available");
+```
+
+```js
+// pre
+// ```js
+// console.log("Markdown features including the code block are available");
+// ```
+```
+
+## 组件即时编辑预览
+
+```jsx live
+// live
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+```
+
+```jsx live noInline
+// live noInline
+const project = "Docusaurus";
+
+const Greeting = () => (
+  <p>Hello {project}!</p>
+);
+
+// render()
+render(
+  <Greeting />
+);
+```
+
+- https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks
+https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks#interactive-code-editor

@@ -44,14 +44,15 @@ const config: Config = {
           editUrl: 'https://github.com/yincw/rework/',
           // routeBasePath: '/', // 文档模式下，本地搜索无法使用
         },
-        blog: false, // 文档模式
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
+        // blog: false, // 文档模式
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl: 'https://github.com/yincw/rework/',
+          // blogSidebarCount: 5,
+          blogSidebarTitle: '最近的帖子',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -68,19 +69,21 @@ const config: Config = {
   themeConfig: {
     navbar: {
       hideOnScroll: true, // 导航栏：向下滚动隐藏导航栏，向上滚动显示
-      title: 'Rework',
       logo: {
         alt: 'logo',
         src: 'img/rework.svg',
       },
+      title: 'Rework',
       items: [
+        {to: '/', label: '主页', position: 'left'},
         {
-          sidebarId: 'tutorialSidebar',
           type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          to: '/docs',
+          label: '文档页',
           position: 'left',
-          label: '文档',
         },
-        // {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: '博客页', position: 'left'},
         {
           type: 'search',
           position: 'right',
@@ -93,11 +96,11 @@ const config: Config = {
         //   type: 'localeDropdown',
         //   position: 'right',
         // },
-        // {
-        //   href: 'https://github.com/facebook/docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
+        {
+          href: 'https://github.com/yincw/rework',
+          label: 'GitHub',
+          position: 'right',
+        },
       ],
     },
     docs: {
@@ -167,7 +170,7 @@ const config: Config = {
       // ]
     },
     liveCodeBlock: {
-      playgroundPosition: 'bottom',
+      playgroundPosition: 'top',
     }
   } satisfies Preset.ThemeConfig,
 };

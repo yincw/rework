@@ -20,7 +20,7 @@
     "test": "jest --verbose",
     "test:coverage": "jest --coverage",
     "test:e2e": "cypress open",
-    "prepublish": "npm run build && npm run typing:build && git add . && cz && standard-version",
+    "publish": "npm run build && npm run typing:build && git add . && cz && standard-version",
     "build": "npm run clean && npm run build:es && npm run build:lib && npm run build:dist",
     "build:dist": "cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs",
     "build:lib": "tsc --outDir lib --module commonjs",
@@ -40,12 +40,6 @@
     "typecheck": "tsc",
     "gen": "node scripts/generator.js --mode=gen",
     "del": "node scripts/generator.js --mode=del"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged & jest",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "*./src/**/*.{ts,js,less,css,json,md}": [

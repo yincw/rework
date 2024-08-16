@@ -50,8 +50,8 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/yincw/rework/',
-          // blogSidebarCount: 5,
           blogSidebarTitle: '最近的帖子',
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -75,7 +75,6 @@ const config: Config = {
       },
       title: 'Rework',
       items: [
-        {to: '/', label: '主页', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
@@ -86,6 +85,25 @@ const config: Config = {
         {to: '/blog', label: '博客页', position: 'left'},
         {
           type: 'search',
+          position: 'right',
+        },
+        {
+          type: 'dropdown',
+          label: 'Community',
+          items: [
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com',
+            },
+          ],
           position: 'right',
         },
         // {
